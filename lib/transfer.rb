@@ -17,9 +17,9 @@ end
 end
 
 def execute_transaction
-  if sender.valid? && receiver.valid? && sender.balance > amount && self.status == "pending"
-    sender.balance -= amount
-    receiver.balance += amount
+  if self.sender.valid? && self.receiver.valid? && self.sender.balance > amount && self.status == "pending"
+    self.sender.balance -= amount
+    self.receiver.balance += amount
     self.status = "complete"
 
   else
