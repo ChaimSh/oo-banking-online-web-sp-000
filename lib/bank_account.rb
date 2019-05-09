@@ -10,7 +10,7 @@ def initialize(name)
   @status = "open"
 end
 
-def deposit
+def deposit(int)
 end
 
 end
