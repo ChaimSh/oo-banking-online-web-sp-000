@@ -30,6 +30,9 @@ end
 
 
 def reverse_transfer
+  if self.sender.valid? && self.receiver.valid? && self.receiver.balance > amount && self.status == "pending"
+    self.receiver.balance -= amount
+    self.sender.balance += amount
 end
 
 
