@@ -17,11 +17,12 @@ end
 end
 
 def execute_transaction
-  if valid? == true && sender.balance > amount && self.status == "pending"
+  if sender.valid? == true && sender.balance > amount && self.status == "pending"
     sender.balance -= amount
     receiver.balance += amount
     self.status = "complete"
   else
+    
     self.status = "rejected"
     "Transaction rejected. Please check your account balance."
   end
