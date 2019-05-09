@@ -11,7 +11,7 @@ def initialize(name)
 end
 
 def deposit(int)
-  @balance + 1000
+  @balance + int
 end
 
 end
